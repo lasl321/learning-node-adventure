@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lasl321/learning-node-adventure/issues"
   },
-  "homepage": "https://github.com/lasl321/learning-node-adventure#readme"
+  "homepage": "https://github.com/lasl321/learning-node-adventure#readme",
+  "devDependencies": {
+    "typings": "^0.8.1"
+  }
 }
