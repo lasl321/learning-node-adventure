@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lasl321/learning-node-adventure#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "typings": "^0.8.1"
   }
 }
