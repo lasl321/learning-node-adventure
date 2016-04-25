@@ -1,7 +1,26 @@
-const crypto = require('crypto');
+const dns = require('dns');
+const os = require('os');
 
-const secret = 'abcdefg';
-const hash = crypto.createHmac('sha256', secret)
-                   .update('I love cupcakes')
-                   .digest('hex');
-console.log(hash);
+dns.lookup('nodejs.org', (err, addresses, family) => {
+  console.log('addresses:', addresses);
+});
+
+
+dns.resolve4('nodejs.org', (err, addresses) => {
+  if (err) throw err;
+
+  console.log(`addresses: ${JSON.stringify(addresses)}`);
+
+  addresses.forEach((a) => {
+    dns.reverse(a, (err, hostnames) => {
+      if (err) {
+        throw err;
+      }
+      console.log(`reverse for ${a}: ${JSON.stringify(hostnames)}`);
+    });
+  });
+});
+
+console.log(os.cpus());
+console.log(os.tmpdir());
+console.log(os.type());
