@@ -1,5 +1,7 @@
-const numCPUs = require('os').cpus().length;
+const crypto = require('crypto');
 
-console.log(numCPUs);
-
-console.log(`Danger ${numCPUs}`);
+const secret = 'abcdefg';
+const hash = crypto.createHmac('sha256', secret)
+                   .update('I love cupcakes')
+                   .digest('hex');
+console.log(hash);
