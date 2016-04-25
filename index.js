@@ -1,26 +1,10 @@
-const dns = require('dns');
-const os = require('os');
+var express = require('express');
+var app = express();
 
-dns.lookup('nodejs.org', (err, addresses, family) => {
-  console.log('addresses:', addresses);
+app.get('/', function (req, res) {
+  res.send('Hello World!');
 });
 
-
-dns.resolve4('nodejs.org', (err, addresses) => {
-  if (err) throw err;
-
-  console.log(`addresses: ${JSON.stringify(addresses)}`);
-
-  addresses.forEach((a) => {
-    dns.reverse(a, (err, hostnames) => {
-      if (err) {
-        throw err;
-      }
-      console.log(`reverse for ${a}: ${JSON.stringify(hostnames)}`);
-    });
-  });
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
 });
-
-console.log(os.cpus());
-console.log(os.tmpdir());
-console.log(os.type());
