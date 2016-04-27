@@ -1,4 +1,7 @@
 var fs = require('fs');
+
+console.log(require.cache);
+
 function readJSONThrows(filename, callback) {
   fs.readFile(filename, function (err, data) {
     if (err) {
