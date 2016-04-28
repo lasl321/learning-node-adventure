@@ -6,8 +6,10 @@ var util = require('util');
 
 function MyCustomEmitter() {
   this.name = 'my custom emitter';
-  util.inherits(MyCustomEmitter, EventEmitter);
+  EventEmitter.call(this);
 }
+
+util.inherits(MyCustomEmitter, EventEmitter);
 
 MyCustomEmitter.prototype.readFile = function (files) {
   let self = this;
