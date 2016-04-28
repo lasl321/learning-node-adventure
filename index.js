@@ -22,7 +22,7 @@ MyCustomEmitter.prototype.readFile = function (files) {
     });
   });
 
-  return self;
+  return this;
 }
 
 const e = new MyCustomEmitter()
