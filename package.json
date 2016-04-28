@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/lasl321/learning-node-adventure#readme",
   "dependencies": {
-    "express": "4.13.4"
+    "express": "4.13.4",
+    "glob": "^7.0.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
