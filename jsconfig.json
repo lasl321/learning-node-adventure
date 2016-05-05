@@ -1,7 +1,8 @@
 {
-    "files": [
-        "typings/main.d.ts",
-        "exists.js",
-        "index.js"
+    "exclude": [
+        "node_modules",
+        "typings/browser",
+        "typings/main",
+        "typings/browser.d.ts"
     ]
 }
