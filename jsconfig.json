@@ -1,6 +1,7 @@
 {
     "files": [
         "typings/main.d.ts",
+        "exists.js",
         "index.js"
     ]
 }
