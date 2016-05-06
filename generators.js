@@ -4,12 +4,14 @@ function* makeGenerator() {
     yield 'Hello';
     yield 'Hello';
     yield 'Hello';
-    yield 'Hello';
+    return 'Hello';
 }
 
 const g = makeGenerator();
-let x = g.next();
-while (!x.done) {
-    console.log(x.value);
-    x = g.next();
-}
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
