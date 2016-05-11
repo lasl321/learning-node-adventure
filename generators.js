@@ -1,17 +1,12 @@
 'use strict';
 
 function* makeGenerator() {
-    yield 'Hello';
-    yield 'Hello';
-    yield 'Hello';
-    return 'Hello';
+    let x = yield null;
+    console.log('Got', x);
+    return;
 }
 
 const g = makeGenerator();
 console.log(g.next());
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
+console.log(g.next('foo'));
 console.log(g.next());
